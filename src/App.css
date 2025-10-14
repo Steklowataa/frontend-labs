@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.mainHeader {
+  padding: 8px;
+  font-size: bold;
+  border-bottom: 1px solid #eee
+}
+
+.secondHeader {
+  padding: 8px;
+  border-bottom: 1px solid #eee
+}
+
+.thirdHeader {
+  padding: 8px;
+  font-weight: bold
+}
