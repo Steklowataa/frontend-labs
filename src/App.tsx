@@ -4,6 +4,7 @@ import RootLayout from "./layouts/RootLayout";
 import Lab1 from "./pages/lab01";
 import Lab2 from "./pages/lab02";
 import Home from "./pages/Home";
+import Lab3 from "./pages/lab03";
 import NotFound from "./pages/NotFound";
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="/lab1" element={<Lab1 />} />
           <Route path="/lab2" element={<Lab2 />} />
           <Route path="/lab2/:id" element={<Lab2 />} />
+          <Route path="/lab3" element={<Lab3 />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
