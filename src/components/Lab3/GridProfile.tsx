@@ -1,25 +1,13 @@
-import React, { useReducer, useEffect } from "react";
-import AppReducer from "../../data/AppReducer";
+import React, { useContext } from "react";
 import { Person } from "../../types";
+import AppContext from "../../data/AppContext";
 
 interface GridProfileProps {
-  element: React.ComponentType<Person & {
-    onDelete?: () => void;
-    onCheck?: () => void;
-    onRate?: () => void;
-  }>;
-  data: Person[];
+  element: React.ComponentType<Person>;
 }
 
-const GridProfile: React.FC<GridProfileProps> = ({ element: Element, data }) => {
-  const [state, dispatch] = useReducer(AppReducer, [], () => {
-    const saved = localStorage.getItem("peopleData");
-    return saved ? JSON.parse(saved) : data;
-  });
-
-//   useEffect(() => {
-//     localStorage.setItem("peopleData", JSON.stringify(state));
-//   }, [state]);
+const GridProfile: React.FC<GridProfileProps> = ({ element: Element }) => {
+  const { items: state } = useContext(AppContext);
 
   return (
     <div
@@ -35,9 +23,6 @@ const GridProfile: React.FC<GridProfileProps> = ({ element: Element, data }) => 
         <Element
           key={person.id}
           {...person}
-          onDelete={() => dispatch({ type: "delete", payload: person.id })}
-          onCheck={() => dispatch({ type: "check", payload: person.id })}
-          onRate={() => dispatch({ type: "rate", payload: person.id })}
         />
       ))}
     </div>

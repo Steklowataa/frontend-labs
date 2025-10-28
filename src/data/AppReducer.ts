@@ -1,4 +1,3 @@
-// src/data/AppReducer.ts
 import { Person, Action } from "../../src/types";
 
 export default function AppReducer(state: Person[], action: Action): Person[] {
@@ -19,6 +18,14 @@ export default function AppReducer(state: Person[], action: Action): Person[] {
 
     case "delete":
       return state.filter(person => person.id !== action.payload);
+    case 'add':
+      const newId = Math.max(...state.map(item => item.id), 0) + 1;
+      return [ ...state, { id: newId, ...action.payload } ];
+
+    case 'edit':
+      return state.map(item =>
+        item.id === action.payload.id ? action.payload : item
+      );
 
     default:
       return state;
