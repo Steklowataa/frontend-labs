@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const firstNames = ["Anna", "Piotr", "Katarzyna", "Tomasz", "Agnieszka", "Marcin", "Joanna", "Krzysztof", "Małgorzata", "Andrzej"];
-const lastNames = ["Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk", "Kamiński", "Lewandowski", "Zieliński", "Szymański", "Woźniak"];   
+const lastNames = ["Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk", "Kamiński", "Lewandowski", "Zieliński", "Szymański", "Woźniak"]; 
+const checked = false
+const rating = 0  
 
 const numberOfItems = parseInt(process.argv[2], 10) || 10; 
 
@@ -22,7 +24,9 @@ for (let i = 1; i <= numberOfItems; i++) {
         id: i,
         firstName: firstName,
         lastName: lastName,
-        age: age
+        age: age,
+        checked: checked,
+        rating: rating
     });
 }
 

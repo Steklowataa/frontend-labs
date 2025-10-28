@@ -77,11 +77,11 @@ const NavBarMenuApp: React.FC = () => {
             Home
           </Link>
         </li>
-        {/* <li style={navLinkItem}>
-          <Link to="" style={linkStyle}>
-            About
+        <li style={navLinkItem}>
+          <Link to="/lab4/add" style={linkStyle}>
+            Add new person
           </Link>
-        </li> */}
+        </li>
         <li style={navLinkItem}>
           <button onClick={toggleDropdown} style={dropbtn}>
             Labs ▼

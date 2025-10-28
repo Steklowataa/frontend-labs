@@ -1,32 +1,42 @@
 export const data = [
     {
         "id": 1,
-        "firstName": "Tomasz",
-        "lastName": "Wójcik",
-        "age": 32
+        "firstName": "Marcin",
+        "lastName": "Kowalski",
+        "age": 22,
+        "checked": false,
+        "rating": 0
     },
     {
         "id": 2,
-        "firstName": "Joanna",
-        "lastName": "Woźniak",
-        "age": 54
+        "firstName": "Marcin",
+        "lastName": "Wiśniewski",
+        "age": 67,
+        "checked": false,
+        "rating": 0
     },
     {
         "id": 3,
-        "firstName": "Małgorzata",
-        "lastName": "Lewandowski",
-        "age": 28
+        "firstName": "Piotr",
+        "lastName": "Nowak",
+        "age": 30,
+        "checked": false,
+        "rating": 0
     },
     {
         "id": 4,
-        "firstName": "Piotr",
-        "lastName": "Woźniak",
-        "age": 53
+        "firstName": "Marcin",
+        "lastName": "Nowak",
+        "age": 20,
+        "checked": false,
+        "rating": 0
     },
     {
         "id": 5,
-        "firstName": "Katarzyna",
-        "lastName": "Kamiński",
-        "age": 39
+        "firstName": "Marcin",
+        "lastName": "Kowalski",
+        "age": 50,
+        "checked": false,
+        "rating": 0
     }
 ];
