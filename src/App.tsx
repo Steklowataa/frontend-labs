@@ -13,6 +13,10 @@ import { data } from "./data/module-data";
 import Lab4 from "./pages/lab04";
 import AddPersonForm from "./pages/lab4_add";
 import EditPersonForm from "./pages/lab4_edit";
+import Lab5Page from "./components/Lab5/Lab5";
+import UserDetailsPage from "./pages/userDetailsPage";
+import PostCommentsPage from "./pages/PostCommentsPage";
+
 
 
 
@@ -35,6 +39,9 @@ const App: React.FC = () => {
             <Route path="/lab4/add" element={<AddPersonForm />} />
             <Route path="/lab4/edit/:id" element={<EditPersonForm />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/lab5" element={<Lab5Page />} />
+            <Route path="/lab5/users/:id" element={<UserDetailsPage />} />
+            <Route path="/lab5/posts/:id/comments" element={<PostCommentsPage />} />
           </Route>
         </Routes>
       </Router>
